@@ -6,8 +6,8 @@ import FastImage from 'react-native-fast-image';
 import {IMAGE_BASE_URL} from '../envs/movies.json';
 
 const MovieDetailsComponent = props => {
-  const {book} = props;
-  const url = useMemo(() => IMAGE_BASE_URL + book.poster_path, [book]);
+  const {movie} = props;
+  const url = useMemo(() => IMAGE_BASE_URL + movie.poster_path, [movie]);
 
   return (
     <View style={styles.alingCenter}>
@@ -26,7 +26,7 @@ const MovieDetailsComponent = props => {
           />
         </View>
         <Text style={styles.title} numberOfLines={1} ellipsizeMode={'tail'}>
-          {book.title || 'Not found'}
+          {movie.title || 'Not found'}
         </Text>
       </View>
     </View>

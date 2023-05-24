@@ -8,7 +8,7 @@ import MovieAutoCompleteResultComponent from './MovieAutoCompleteResultComponent
 const MovieScreenSearchComponent = () => {
   const dispatch = useDispatch();
   const root = useSelector(state => state);
-  const books = root?.movie_search;
+  const movie = root?.movie_search;
   const [search] = useState(null);
 
   const onTextChange = search => {
@@ -28,10 +28,10 @@ const MovieScreenSearchComponent = () => {
         value={search}
         onChangeText={onTextChange}
       />
-      {books?.isLoader ? (
-        <ActivityIndicator animating={books?.isLoader} color="black" />
+      {movie?.isLoader ? (
+        <ActivityIndicator animating={movie?.isLoader} color="black" />
       ) : (
-        <MovieAutoCompleteResultComponent books={books} />
+        <MovieAutoCompleteResultComponent movie={movie} />
       )}
     </View>
   );

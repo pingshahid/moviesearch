@@ -4,15 +4,15 @@ import {FlatList, View} from 'react-native';
 import MovieDetailsComponent from './MovieDetailsComponent';
 
 const MovieAutoCompleteResultComponent = props => {
-  const {books} = props;
+  const {movie} = props;
 
   return (
     <View>
-      {books?.data?.length > 0 && (
+      {movie?.data?.length > 0 && (
         <FlatList
-          data={books?.data}
+          data={movie?.data}
           renderItem={({index}) => (
-            <MovieDetailsComponent book={books?.data[index]} />
+            <MovieDetailsComponent movie={movie?.data[index]} />
           )}
         />
       )}

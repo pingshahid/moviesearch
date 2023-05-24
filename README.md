@@ -27,7 +27,7 @@ I am using Redux for state management and using the latest redux toolkit library
 For each feature i am creating a slice using createSlice which is redux toolkit function
 
 # Api folder
-this folder contains the books.js which is used to fire https request and fetch the data and set that data in to redux store with the help of reducers
+this folder contains the movies.js which is used to fire https request and fetch the data and set that data in to redux store with the help of reducers
 
 # Configurations folder
 App starts with the App.tsx and then Root.js
